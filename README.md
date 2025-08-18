@@ -44,7 +44,7 @@ This project is a machine learning pipeline that predicts daily stock returns by
 
 ## How to Run the Project
 
-1. **Clone:** 
+1. **Clone:** Clone the repository from Github
 
 2. **Setup:** `pip install -r requirements.txt` and place raw data files in `data/raw/`.
 
