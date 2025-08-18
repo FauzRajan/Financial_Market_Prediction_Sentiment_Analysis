@@ -80,7 +80,3 @@ FinSense-Stock-Prediction/
 ## Dependencies
 
 Listed in `requirements.txt`.
-
-## License
-
-This project is open-sourced under the MIT License.
