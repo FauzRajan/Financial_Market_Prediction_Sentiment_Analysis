@@ -8,25 +8,21 @@ This project is a machine learning pipeline that predicts daily stock returns by
 
 ### 1. Data Collection (`src/data_collection.py`)
 
-* **Data Sources:** Uses `yfinance` for 5 years of stock data and a custom dataset for financial news.
+* Uses `yfinance` for 5 years of stock data and a custom dataset for financial news.
 
 ### 2. Sentiment Analysis (`src/sentiment_analysis.py`)
 
-* **Custom DL Model:** A TensorFlow/Keras model trained on financial text is used to score news headlines, generating sentiment labels and probability scores.
+* A TensorFlow/Keras model trained on financial text is used to score news headlines, generating sentiment labels and probability scores.
 
 ### 3. Feature Engineering (`src/model_training.py`)
 
-* **Feature Creation:** Combines stock price and sentiment data, creating features like lagged returns, sentiment, news volume, and technical indicators (RSI, MACD, etc.).
+* Combines stock price and sentiment data, creating features like lagged returns, sentiment, news volume, and technical indicators (RSI, MACD, etc.).
 
 ### 4. Predictive Modeling (`src/model_training.py`)
 
-* **Model:** A RandomForestRegressor is used for prediction.
+* A RandomForestRegressor is used for prediction.
 
-* **Evaluation:** `GridSearchCV` with `TimeSeriesSplit` (Walk-Forward Validation) ensures robust evaluation on unseen, chronologically split data.
-
-## Key Findings & Results
-
-The model demonstrated strong predictive performance.
+* **Evaluation:** `GridSearchCV` with `TimeSeriesSplit` (Walk-Forward Validation) for evaluation on unseen, chronologically split data.
 
 * **Performance (on unseen test set):**
 
@@ -38,14 +34,6 @@ The model demonstrated strong predictive performance.
 
 * **Feature Importance:** Technical indicators and lagged price features were most influential. Sentiment features had minimal importance due to data sparsity.
 
-### Challenges & Solutions
-
-1. **Data Parsing:** Handled inconsistent data types and CSV formats with explicit conversions.
-
-2. **Sparse Sentiment Data:** Documented and engineered features to work around limited news data.
-
-3. **Model Robustness:** Used `GridSearchCV` with `TimeSeriesSplit` for rigorous tuning and validation.
-
 ## Future Work
 
 1. Integrate larger financial news datasets.
@@ -56,7 +44,7 @@ The model demonstrated strong predictive performance.
 
 ## How to Run the Project
 
-1. **Clone:** `git clone https://github.com/YourGitHubUsername/FinSense-Stock-Prediction.git`
+1. **Clone:** 
 
 2. **Setup:** `pip install -r requirements.txt` and place raw data files in `data/raw/`.
 
