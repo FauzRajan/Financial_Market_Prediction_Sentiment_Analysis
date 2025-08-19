@@ -60,6 +60,7 @@ This project is a machine learning pipeline that predicts daily stock returns by
 
 ```
 FinSense-Stock-Prediction/
+├── main.py
 ├── data/
 │   ├── raw/
 │   ├── external/
